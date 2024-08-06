@@ -3,7 +3,10 @@ import scanner
 import requests
 import json
 
-json_data = '{ "fen" : "%s" }'% (scanner.run_scanner('source/chess1.png')+' b - - 1 2')
+import controller
+#(scanner.run_scanner('source/chess1.png'))
+
+json_data = '{ "fen" : "%s" }'% controller.CopyFEN().strip()
 json_data = json.loads(json_data)
 
 
